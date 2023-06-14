@@ -1,0 +1,21 @@
+choices = ['rock', 'paper', 'scissors']
+
+player_choice = input("Choose rock, paper, or scissors: ")
+player2_choice = input("Choose rock, paper, or scissors: ")
+
+print("player1 chose:", player_choice)
+print("player2 chose:", player2_choice)
+
+if player_choice == player2_choice:
+    print("Tie!")
+elif (player_choice == 'rock' and player2_choice == 'scissors') or \
+     (player_choice == 'paper' and player2_choice == 'rock') or \
+     (player_choice == 'scissors' and player2_choice == 'paper'):
+    print("player1 win!")
+elif player_choice not in choices:
+            print("Invalid choice. Please try again.")
+
+elif player2_choice not in choices:
+            print("Invalid choice. Please try again.")
+else:
+    print("player2 wins!")
